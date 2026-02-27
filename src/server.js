@@ -46,7 +46,7 @@ app.get("/api/competidores", async (req, res) => {
 });
 
 app.get("/api/torneos", async (req, res) => {
-    const [rows] = await pool.query("SELECT * FROM torneos ORDER BY fechaInicio DESC LIMIT 500");
+    const [rows] = await pool.query("SELECT * FROM torneos ORDER BY fecha_inicio DESC LIMIT 500");
     res.json(rows);
 });
 
